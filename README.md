@@ -70,24 +70,59 @@ cd todo-dapp
 
 ### 2. Install dependencies
 
+#### 🧪 For Smart Contract side (root/ or backend/)
 ```bash
 npm install
 ```
 
-### 3. Deploy contract to Sepolia
-
-```bash
-npx hardhat compile
-npx hardhat run scripts/deploy.js --network sepolia
-```
-
-### 4. Run the frontend
-
+#### 🎨 For Frontend side (frontend/ folder)
 ```bash
 cd frontend
 npm install
+```
+
+### 3. Set Up .env File 
+- Create a .env file
+- Add values like:
+```bash
+SEPOLIA_RPC_URL=https://eth-sepolia.g.alchemy.com/v2/your_address_here
+
+PRIVATE_KEY=your_key_here
+
+```
+
+### 4. Install dotenv if you haven’t:
+```
+npm install dotenv
+```
+
+### 5. Compile & Deploy contract to Sepolia
+
+```bash
+npx hardhat compile
+npx hardhat run scripts/deploy.js --network sepolia (if needed)
+```
+
+### 6. Configure Frontend
+In `frontend/src/ethers-config.js`, update the contract address and network:
+
+```
+export const CONTRACT_ADDRESS = "0xYourDeployedAddress";
+```
+
+### 7. Run the frontend
+
+```bash
+cd frontend
+$env:NODE_OPTIONS="--openssl-legacy-provider" (if needed)
 npm start
 ```
+Then open http://localhost:3000 in your browser.
+
+### 8. Connect MetaMask
+- Switch MetaMask to Sepolia Testnet
+- Import wallet with Sepolia ETH (get from faucet)
+- Approve transactions when prompted
 
 ---
 
@@ -100,15 +135,6 @@ npm start
 
 ---
 
-## 🧪 Available Scripts
-```bash
-npx hardhat compile          # Compile smart contracts
-npx hardhat run scripts/deploy.js --network sepolia
-npm start                    # Start React frontend
-```
-
----
-
 ## 📷 Screenshots
 
  <p align="center"><img src="https://github.com/user-attachments/assets/148e3aff-a604-417f-b309-781301ef4b61" alt="b4 connect wallet" width="50%"> 
@@ -118,12 +144,6 @@ npm start                    # Start React frontend
  <p align="center"><img src="https://github.com/user-attachments/assets/abd45102-4ca0-4676-b75a-eacd56f52611" alt="b4 add task" width="50%">
  
  <p align="center"><img src="https://github.com/user-attachments/assets/c8e227ff-4418-48a5-b002-4f67f2a80726" alt="after add task" width="50%">
-
- ---
-
- ## 📜 License
-
- MIT © 2025 jiashinnn
 
  ---
 
