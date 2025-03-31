@@ -26,6 +26,39 @@ A simple yet modern decentralized to-do list application built on the Ethereum b
 
 ---
 
+## Detailed Technologies Used
+
+| Layer | Tech/Tool |Purpose|
+|-------|------|------|
+| Blockchain	| Ethereum Sepolia	| Decentralized data storage| 
+| Smart Contract	| Solidity	| Define task logic (add, toggle, delete, timestamp)| 
+| Dev Framework	| Hardhat	| Compile, test, deploy contracts| 
+| Node Provider	| Alchemy / Infura	| Connect frontend to Sepolia | 
+| Frontend	| React.js	| Build UI| 
+| Web3 Interaction	| Ethers.js	| Talk to the contract| 
+| Wallet Integration	| MetaMask	| Sign transactions| 
+| UI Styling	| HTML + CSS	| Layout and modern styles| 
+
+---
+
+## 🧭 System User Workflow
+
+### 👣 Step-by-Step Flow:
+
+| Step	| Description | 
+|-----|-----|
+| 1️⃣	| User opens the DApp in their browser| 
+| 2️⃣	| DApp connects to MetaMask, prompting user to approve| 
+| 3️⃣	| On success, user sees task input, task list, and UI buttons| 
+| 4️⃣	| User types a task, clicks "Add" → confirmation alert shows| 
+| 5️⃣	| If confirmed, DApp shows "⏳ Waiting" message, sends transaction| 
+| 6️⃣	| After MetaMask confirms and transaction is mined, task appears in list with date| 
+| 7️⃣	| User can tick checkbox to mark as done → confirmation prompt shows| 
+| 8️⃣	| DApp shows "⏳ Updating...", then task gets updated and UI refreshes| 
+| 9️⃣	| User can delete any task, prompted with confirmation alert first| 
+| 🔁	| User continues interacting or reloads page → tasks are fetched/loaded from blockchain| 
+| 🔒	| If wallet is not connected, DApp shows message to connect MetaMask| 
+
 ## 🔧 Installation & Setup
 
 ### 1. Clone the repo
