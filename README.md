@@ -1,4 +1,4 @@
-# 📝 Blockchain Powered Decentralized_To-Do List DApp
+# 📝 Blockchain Powered Decentralized To-Do List DApp
 
 A simple yet modern decentralized to-do list application built on the Ethereum blockchain using **Solidity**, **Hardhat**, **React.js**, and **Ethers.js**. Tasks are stored on-chain and can be created, completed, and deleted by interacting with a smart contract deployed to the **Sepolia Testnet**.
 
