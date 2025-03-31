@@ -64,8 +64,8 @@ A simple yet modern decentralized to-do list application built on the Ethereum b
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/todo-dapp.git
-cd todo-dapp
+git clone https://github.com/yourusername/Blockchain_Powered_Decentralized_To-Do_List_DApp.git
+cd Blockchain_Powered_Decentralized_To-Do_List_DApp
 ```
 
 ### 2. Install dependencies
