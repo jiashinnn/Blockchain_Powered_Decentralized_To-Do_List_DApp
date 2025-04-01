@@ -139,11 +139,8 @@ Then open http://localhost:3000 in your browser.
 
  <p align="center"><img src="https://github.com/user-attachments/assets/148e3aff-a604-417f-b309-781301ef4b61" alt="b4 connect wallet" width="50%"> 
 
- <p align="center"><img src="https://github.com/user-attachments/assets/f1af93a1-1933-46f8-88c5-a08e6435c859" alt="after connect wallet" width="50%"> 
+ <p align="center"><img src="https://github.com/user-attachments/assets/67b8c7c7-a56e-481f-8444-db9db1a2c3af" alt="after connect wallet" width="50%"> 
 
- <p align="center"><img src="https://github.com/user-attachments/assets/abd45102-4ca0-4676-b75a-eacd56f52611" alt="b4 add task" width="50%">
- 
- <p align="center"><img src="https://github.com/user-attachments/assets/c8e227ff-4418-48a5-b002-4f67f2a80726" alt="after add task" width="50%">
 
  ---
 
