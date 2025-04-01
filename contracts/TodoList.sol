@@ -7,19 +7,21 @@ contract TodoList {
         string content;
         bool completed;
         uint createdAt;
+        uint order;
     }
 
     uint public taskCount;
     mapping(uint => Task) public tasks;
 
-    event TaskCreated(uint id, string content, uint createdAt);
+    event TaskCreated(uint id, string content, uint createdAt, uint order);
     event TaskCompleted(uint id, bool completed);
+    event TaskOrderUpdated(uint id, uint newOrder);
 
     function createTask(string memory _content) public {
         require(bytes(_content).length > 0, "Task content required");
         taskCount++;
-        tasks[taskCount] = Task(taskCount, _content, false, block.timestamp);
-        emit TaskCreated(taskCount, _content, block.timestamp);
+        tasks[taskCount] = Task(taskCount, _content, false, block.timestamp, taskCount);
+        emit TaskCreated(taskCount, _content, block.timestamp, taskCount);
 
     }
 
@@ -37,5 +39,10 @@ contract TodoList {
         taskCount--;
     }
 
+    function updateTaskOrder(uint _id, uint _newOrder) public {
+        require(bytes(tasks[_id].content).length > 0, "Task does not exist");
+        tasks[_id].order = _newOrder;
+        emit TaskOrderUpdated(_id, _newOrder);
+    }
 
 }

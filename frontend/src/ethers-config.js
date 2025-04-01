@@ -2,7 +2,7 @@ import { ethers } from "ethers";
 import TodoListAbi from "./TodoList.json";
 
 // Replace with your deployed contract address from Sepolia
-const contractAddress = "0xF36F5D413D0B2E448411C71A3b899A9f9b8957aA";
+const contractAddress = "0x209098904445FBfFede09D61BcB9F33801c4fd5F";
 
 export const getContract = () => {
   if (!window.ethereum) {
